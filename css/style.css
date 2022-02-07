@@ -1,2 +1,130 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --cl-cyan: hsl(179, 62%, 43%);
+  --cl-bright-yellow: hsl(71, 73%, 54%);
+  --cl-light-gray: hsl(204, 43%, 93%);
+  --cl-grayish-blue: hsl(218, 22%, 67%);
+  --cl-white: hsl(0, 100%, 100%);
+  --cl-light-white: hsla(0, 100%, 100%, 70%);
+
+  --fs-default: 16px;
+
+  font: 400 var(--fs-default) Karla;
+}
+
+@media all and (min-width: 768px) {
+  :root {
+    --fs-default: 18px;
+  }
+}
+
+body {
+  background: var(--cl-light-gray);
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+
+p {
+  line-height: 2rem;
+}
+
+li {
+  padding: .3rem 0;
+  color: var(--cl-light-white);
+}
+
+.container {
+  width: 90%;
+  margin: 5% auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 1px 30px 1px var(--cl-grayish-blue);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 768px;
+}
+
+.column1 {
+  padding: 2rem;
+  background: var(--cl-white);
+  color: var(--cl-grayish-blue);
+}
+
+.column1 h1 {
+  color: var(--cl-cyan);
+}
+
+.column1 h2 {
+  margin: 2rem 0;
+  color: var(--cl-bright-yellow);
+}
+
+.column2 {
+  padding: 2rem;
+  background: var(--cl-cyan);
+  color: var(--cl-white);
+  flex: 1;
+}
+
+.plan {
+  margin: 2rem 0;
+}
+
+.money {
+  font-weight: 700;
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+.month {
+  vertical-align: middle;
+  color: var(--cl-light-white);
+}
+
+.btn {
+  background: var(--cl-bright-yellow);
+  text-decoration: none;
+  color: var(--cl-white);
+  display: block;
+  text-align: center;
+  padding: 1em 0;
+  font-weight: 700;
+  border-radius: .5rem;
+  box-shadow: 0 1px 10px 1px var(--cl-grayish-blue);
+}
+
+.btn:hover {
+  background: hsla(0, 100%, 100%, 0);
+  border: 2px var(--cl-bright-yellow) solid;
+}
+
+.column3 {
+  padding: 2rem;
+  --cl-cyan: hsla(179, 62%, 43%, 60%);
+  background: var(--cl-cyan);
+  color: var(--cl-white);
+  flex: 1;
+}
+
+.column3 h1 {
+  margin-bottom: 2rem;
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .column1 {
+    width: 100%;
+  }
+}
